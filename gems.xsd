@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   xmlns:visual="http://aaa.com/visual"
+		   elementFormDefault="qualified">
+    <xs:import namespace="http://aaa.com/visual" schemaLocation="parameters.xsd"/>
+    <xs:element name="gems">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="gem" minOccurs="1" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="name" type="xs:string"/>
+							<xs:element name="preciousness" type="preciousnessType"/>
+							<xs:element name="origin" type="xs:string"/>
+							<xs:element name="parameters" type="visual:parameterType"/>
+							<xs:element name="value" type="xs:decimal"/>
+						</xs:sequence>
+						<xs:attribute name="id" type="xs:ID" use="required"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="preciousnessType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Precious"/>
+			<xs:enumeration value="Semiprecious"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
+

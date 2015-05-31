@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    targetNamespace="http://aaa.com/visual"
+    elementFormDefault="qualified">
+	<xs:complexType name="parameterType">
+        <xs:sequence>
+            <xs:element name="color">
+               <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="transparent"/>
+                        <xs:enumeration value="red"/>
+                        <xs:enumeration value="green"/>
+                        <xs:enumeration value="blue"/>
+                        <xs:enumeration value="cyan"/>
+                        <xs:enumeration value="yellow"/>
+                        <xs:enumeration value="pink"/>
+                    </xs:restriction>
+                </xs:simpleType>
+ 			</xs:element>
+            <xs:element name="opacity">
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:minInclusive value="0"/>
+						<xs:maxInclusive value="100"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+            <xs:element name="verges">
+            	<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:minInclusive value="4"/>
+						<xs:maxInclusive value="15"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

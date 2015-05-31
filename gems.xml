@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="gems.xsl"?>
+<gems xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://aaa.com/gems gems.xsd"
+	xmlns:visual="http://aaa.com/visual">
+	<gem id="g001">
+		<name>Dimond</name>
+		<preciousness>Precious</preciousness>
+		<origin>South Africa</origin>
+		<parameters>
+			<visual:color>transparent</visual:color>
+			<visual:opacity>70</visual:opacity>
+			<visual:verges>8</visual:verges>
+		</parameters>
+		<value>3.5</value>
+	</gem>
+	<gem id="g002">
+		<name>Ruby</name>
+		<preciousness>Precious</preciousness>
+		<origin>Kenia</origin>
+		<parameters>
+			<visual:color>red</visual:color>
+			<visual:opacity>40</visual:opacity>
+			<visual:verges>12</visual:verges>
+		</parameters>
+		<value>7.5</value>
+	</gem>
+</gems>
+
